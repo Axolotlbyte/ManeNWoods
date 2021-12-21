@@ -16,7 +16,7 @@ export default function Home() {
         <Navbar/>
         <div className='h-screen w-full'>
           <Image
-            src="/../public/images/W&M.webp"
+            src="/images/W&M.webp"
             layout='fill'
             objectFit='cover'
             alt="promo"

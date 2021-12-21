@@ -7,7 +7,7 @@ export default function Navbar() {
         <nav id="navbar" className="fixed flex z-50 justify-between w-full items-center h-22 bg-tranparent">
             <div className="p-3 cursor-pointer">
                 <Image 
-                    src={"/../public/images/saph-logo.webp"}
+                    src={"/images/saph-logo.webp"}
                     alt="logo"
                     width={120}
                     height={70}

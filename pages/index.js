@@ -22,6 +22,9 @@ export default function Home() {
             alt="promo"
           />
         </div>
+        <div className='bg-gray-300 w-full h-screen'>
+
+        </div>
       </main>
 
       <footer className="flex items-center justify-center w-full text-center h-10 border-t-2 border-gray-700">

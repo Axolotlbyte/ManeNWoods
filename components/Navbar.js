@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
-import logo from "../public/images/saph-logo.webp"
+import { useState, useEffect } from "react"
 import Sidebar from "./Sidebar"
 
 export default function Navbar() {
@@ -11,9 +10,23 @@ export default function Navbar() {
 
     const handleActive = () => setActive(!active)
     
+    
+    const handleScroll = () => {
+        const height = window.innerHeight
+        if (window.scrollY > height - 50) {
+          document.getElementById("navbar").className = "fixed flex z-40 justify-between w-full items-center h-22 bg-black transition-colors";
+        } else {
+          document.getElementById("navbar").className = "fixed flex z-40 justify-between w-full items-center h-22 bg-tranparent tranisition-colors";
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+    },[])
+
     return (
         <>
-        <nav id="navbar" className="fixed flex z-40 justify-between w-full items-center h-22 bg-tranparent">
+        <nav id="navbar" className="fixed flex z-40 justify-between w-full items-center h-22 bg-tranparent transition-colors">
             <div className="p-3 cursor-pointer">
                 <Image 
                     src={"/images/saph-logo.webp"}

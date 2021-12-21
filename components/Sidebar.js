@@ -10,22 +10,22 @@ export default function Sidebar({active, handleActive}) {
             </button>
             <div className="w-full h-auto text-white">
                 <ul onClick={handleActive} className="w-full flex flex-col justify-center pl-4 pt-2 cursor-pointer">
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse hover:text-white font-semibold hover:border-none text-red-500 border-red-600">
+                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
                         <Link className="w-full" href="/">
                             <a>Shop</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse hover:text-white font-semibold hover:border-none text-red-500 border-red-600">
+                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
                         <Link className="w-full" href="/">
                             <a>Blog</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse hover:text-white font-semibold hover:border-none text-red-500 border-red-600">
+                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapsetext-white font-semibold hover:border-none border-white">
                         <Link className="w-full" href="/">
                             <a>About</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse hover:text-white font-semibold hover:border-none text-red-500 border-red-600">
+                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
                         <Link className="w-full" href="/">
                             <a>Contact</a>
                         </Link>

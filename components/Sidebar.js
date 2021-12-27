@@ -9,25 +9,25 @@ export default function Sidebar({active, handleActive}) {
                 </svg>
             </button>
             <div className="w-full h-auto text-white">
-                <ul onClick={handleActive} className="w-full flex flex-col justify-center pl-4 pt-2 cursor-pointer">
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
-                        <Link className="w-full" href="/">
-                            <a>Shop</a>
+                <ul className="w-full flex flex-col justify-center pl-4 pt-2 cursor-pointer">
+                    <li onClick={handleActive} className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
+                        <Link className="w-full" href="/shop">
+                            <a className="w-full">Shop</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
-                        <Link className="w-full" href="/">
-                            <a>Blog</a>
+                    <li onClick={handleActive} className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
+                        <Link className="w-full" href="/blog">
+                            <a className="w-full">Blog</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapsetext-white font-semibold hover:border-none border-white">
-                        <Link className="w-full" href="/">
-                            <a>About</a>
+                    <li onClick={handleActive} className="w-full my-2 text-xl p-2 border-l-2 border-collapsetext-white font-semibold hover:border-none border-white">
+                        <Link className="w-full" href="/about">
+                            <a className="w-full">About</a>
                         </Link>
                     </li>
-                    <li className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
-                        <Link className="w-full" href="/">
-                            <a>Contact</a>
+                    <li onClick={handleActive} className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white">
+                        <Link className="w-full" href="/contact">
+                            <a className="w-full">Contact</a>
                         </Link>
                     </li>
                 </ul>

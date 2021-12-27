@@ -13,9 +13,9 @@ export default function Layout ({children, home}) {
         <main className="w-full">
             {children}
         </main>
-
-        <footer className="flex items-center justify-center w-full text-center h-10 border-t-2 border-gray-700">
-            <p>
+        <footer className="flex flex-col">
+            <div className="spacer bottom-0"></div>
+            <p className="flex text-slate-50 items-center justify-center w-full text-center h-10 bg-black">
                 All Rights Reserved{' '}
                 <span className="font-bold">
                 <Image src="/images/saph-logo.webp" 
@@ -27,6 +27,16 @@ export default function Layout ({children, home}) {
                 </span>
             </p>
       </footer>
+      <style jsx>{`
+        .spacer{
+            aspect-ratio: 900/100;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('/wave/Vector.svg');
+        }
+      `}</style>
     </div>
     )
 }

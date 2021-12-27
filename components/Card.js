@@ -1,12 +1,12 @@
 export default function Card(props){
     return(
         <>
-        <div className="border-2 bg-slate-100 border-yellow-600 h-card">
+        <div className="border-2 hover:scale-105 transition-transform card bg-slate-100 border-yellow-600 h-card">
             
         </div>
         <style jsx>{`
-            .h-card{
-                height: 50vh;
+            .card{
+                aspect-ratio: 1 / 1.195;
             }
         `}</style>
         </>

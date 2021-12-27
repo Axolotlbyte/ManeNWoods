@@ -48,7 +48,7 @@ export default function Navbar({home}) {
             </div>
             <div className="mr-4 flex items-center">
                 <ul onClick={handleActive} className="w-full hidden lg:flex justify-center z-50 pl-4 cursor-pointer">
-                    <li className="w-full flex justify-center mx-2 text-xl hover:bg-transparent hover:text-white p-1 px-8 border-2 border-collapse bg-white rounded-r-3xl rounded-l-3xl text-black font-semibold ">
+                    <li className="w-full flex justify-center mx-2 text-xl hover:bg-transparent hover:text-white p-1 px-8 border-2 border-white border-collapse bg-white rounded-r-3xl rounded-l-3xl text-black font-semibold ">
                         <Link className="w-full" href="/shop">
                             <a>SHOP</a>
                         </Link>

@@ -14,7 +14,7 @@ export default function Home() {
             alt="promo"
           /> */}
         </div>
-        <div className='bg-gray-300 w-full h-screen'>
+        <div className='w-full h-screen'>
 
         </div>
         <style jsx>{`

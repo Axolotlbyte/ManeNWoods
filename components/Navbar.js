@@ -6,23 +6,22 @@ import Sidebar from "./Sidebar";
 
 export default function Navbar({ home }) {
   const [active, setActive] = useState(false);
-  const [nav, setNav] = useState("")
+  const [nav, setNav] = useState("");
   const handleActive = () => setActive(!active);
 
   const handleScroll = () => {
     const height = window.innerHeight;
     if (home) {
       if (window.scrollY > height - 50) {
-        setNav("bg-black")
+        setNav("bg-black");
       } else {
-        setNav("bg-transparent")
+        setNav("bg-transparent");
       }
     } else {
       if (window.scrollY > 10) {
-        setNav("bg-black")
-
+        setNav("bg-black");
       } else {
-        setNav("bg-transparent")
+        setNav("bg-transparent");
       }
     }
   };
@@ -35,7 +34,10 @@ export default function Navbar({ home }) {
     <>
       <nav
         id="navbar"
-        className={"fixed flex z-40 justify-between w-full items-center h-22 transition-colors " + nav}
+        className={
+          "fixed flex z-40 justify-between w-full items-center h-22 transition-colors " +
+          nav
+        }
       >
         <div className="p-3 cursor-pointer">
           <Link href="/">
@@ -48,6 +50,23 @@ export default function Navbar({ home }) {
               />
             </a>
           </Link>
+        </div>
+        <div className="border-2 rounded-l-full text-white rounded-r-full px-3 flex items-center justify-center">
+          <input type={"search"} className="w-full outline-0 text-lg lg:text-xl bg-transparent" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
         </div>
         <div className="mr-4 flex items-center">
           <ul

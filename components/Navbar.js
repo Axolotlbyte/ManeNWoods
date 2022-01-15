@@ -51,7 +51,7 @@ export default function Navbar({ home }) {
             </a>
           </Link>
         </div>
-        <div className="border-2 rounded-l-full text-white rounded-r-full px-3 flex items-center justify-center">
+        <div className="border-2 hidden rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 md:flex items-center justify-center">
           <input type={"search"} className="w-full outline-0 text-lg lg:text-xl bg-transparent" />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +160,25 @@ export default function Navbar({ home }) {
           }
         ></div>
         <Sidebar handleActive={handleActive} active={active} />
+      </div>
+      <div className={"fixed mt-24 h-auto bg-black w-full md:hidden flex items-center justify-center " + nav}>
+      <div className="border-2 my-1 bg-black w-11/12 mx-auto rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 flex items-center justify-center">
+          <input type={"search"} className="w-full outline-0 text-lg lg:text-xl bg-transparent" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
       </div>
     </>
   );

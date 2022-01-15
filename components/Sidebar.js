@@ -8,6 +8,7 @@ export default function Sidebar({ active, handleActive }) {
         (active ? "sidebar active" : "sidebar")
       }
     >
+      <div className="flex justify-between">
       <button className="p-4" onClick={handleActive}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +25,14 @@ export default function Sidebar({ active, handleActive }) {
           />
         </svg>
       </button>
+      <button
+            onClick={handleActive}
+            className={
+              "transition-all w-10 m-4 lg:mx-2 flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 border-2 border-white"
+            }
+            title="user"
+          ></button>
+      </div>
       <div className="w-full h-auto text-white">
         <ul className="w-full flex flex-col justify-center pl-4 pt-2 cursor-pointer">
           <li

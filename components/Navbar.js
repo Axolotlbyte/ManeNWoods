@@ -161,8 +161,8 @@ export default function Navbar({ home }) {
         ></div>
         <Sidebar handleActive={handleActive} active={active} />
       </div>
-      <div className={"fixed mt-24 h-auto bg-black w-full md:hidden flex items-center justify-center " + nav}>
-      <div className="border-2 my-1 bg-black w-11/12 mx-auto rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 flex items-center justify-center">
+      <div className={"fixed mt-24 h-auto w-full md:hidden flex items-center justify-center " + nav}>
+      <div className="border-2 my-1 bg-black bg-opacity-50 w-11/12 mx-auto rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 flex items-center justify-center">
           <input type={"search"} className="w-full outline-0 text-lg lg:text-xl bg-transparent" />
           <svg
             xmlns="http://www.w3.org/2000/svg"

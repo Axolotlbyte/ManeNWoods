@@ -20,7 +20,7 @@ export default function blog() {
         </p>
         <hr className="w-10/12 lg:w-4/5 mx-auto bg-gradient-to-r from-red-700 to-cyan-700" />
         <LatestPost/>
-        <div className="w-11/12 gap-4 mx-auto grid md:grid-cols-3 py-4">
+        <div className="w-11/12 gap-4 mx-auto grid md:grid-cols-3 py-4 pb-12">
           <PostCard id={"0"}/>
           <PostCard id={"1"}/>
           <PostCard id={"2"}/>

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 
 export default function Home() {
+
   return (
     <Layout home>
       <div className='h-screen w-full back-img'>

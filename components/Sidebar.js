@@ -28,7 +28,7 @@ export default function Sidebar({ active, handleActive }) {
         <button
           onClick={handleActive}
           className={
-            "transition-all w-10 m-4 lg:mx-2 flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 border-2 border-white"
+            "transition-all w-10 m-4 lg:mx-2 flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 hover:border-2 border-white"
           }
           title="user"
         >

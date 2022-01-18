@@ -1,4 +1,4 @@
-import axios from "axios";
+import Layout from "../../components/Layout";
 
 export async function getStaticPaths() {
   const data = [
@@ -21,7 +21,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-
   return {
     props: {
       params,
@@ -30,5 +29,21 @@ export async function getStaticProps({ params }) {
 }
 
 export default function handler({ params }) {
-  return <div className="p-4 text-center font-bold text-3xl">{params.id} - Dummy Page blah blah blah</div>;
+  return (
+    <Layout>
+      <div className="w-full text-white pt-28 h-auto bg-black">
+        <div className="grid md:grid-cols-2">
+          <div className="w-full aspect bg-gradient-to-r from-teal-500 via-red-500 to-cyan-600"></div>
+          <div className="w-full h-auto">
+            <p className="text-3xl font-bold px-4">Item Name</p>
+          </div>
+        </div>
+      </div>
+      <style jsx>{`
+        .aspect {
+          aspect-ratio: 1/1;
+        }
+      `}</style>
+    </Layout>
+  );
 }

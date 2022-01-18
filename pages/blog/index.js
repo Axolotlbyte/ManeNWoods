@@ -26,7 +26,7 @@ export default function blog({ data }) {
   };
   fun();
   return (
-    <Layout>
+    <Layout background={"black"}>
       <div className="h-screen bg-gradient-to-tr from-cyan-500 via-red-500 to-teal-500 pt-28 text-center text-5xl font-bold w-full">
         <div className="relative flex items-center overflow-hidden w-11/12 text-white h95 mx-auto rounded-2xl bg-gradient-to-r from-cyan-500 to-sky-500 ">
           <div className="w-full h-full relative">
@@ -45,7 +45,7 @@ export default function blog({ data }) {
         </div>
       </div>
       <div className="h-auto w-full">
-        <p className="text-center grid py-5">
+        <p className="text-white text-center grid py-5">
           <span className="font-extrabold text-2xl lg:text-5xl pt-6 ">
             FROM MANE & WOODS
           </span>

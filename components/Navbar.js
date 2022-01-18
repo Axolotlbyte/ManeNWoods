@@ -26,9 +26,9 @@ export default function Navbar({ home }) {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  // }, []);
 
   return (
     <>
@@ -110,7 +110,7 @@ export default function Navbar({ home }) {
           </button>
           <button
             className={
-              "transition-all hidden w-10 mr-2 lg:mx-2 lg:flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 border-2 border-white"
+              "transition-all hidden w-10 mr-2 lg:mx-2 lg:flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 hover:border-2 border-white"
             }
             title="user"
           >

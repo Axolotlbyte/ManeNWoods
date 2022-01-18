@@ -4,7 +4,7 @@ export default function PostCard({id}) {
     const prevText = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio"
   return (
     <Link key={id} href={"/blog/" + id}>
-    <a className="cursor-pointer relative overflow-hidden w-full aspect rounded-xl border hover:shadow-lg shadow-gray-400">
+    <a className="text-white hover:ring-2 hover:border-none ring-red-800 cursor-pointer relative overflow-hidden w-full aspect rounded-xl border hover:shadow-lg shadow-gray-400">
       <div className="w-full h-2/5 bg-gradient-to-r from-teal-700 to-cyan-600"></div>
       <h1 className="pl-4 pt-2 text-3xl font-bold">Blog Post heading</h1>
       <p className="p-4">{prevText.length < 150? prevText : prevText.substring(0,150)}...</p>

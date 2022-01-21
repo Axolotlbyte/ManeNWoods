@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Sidebar from "./Sidebar";
 
-export default function Navbar({ home }) {
+export default function Navbar({ home, handleToggle }) {
   const [active, setActive] = useState(false);
   const [nav, setNav] = useState("");
   const handleActive = () => setActive(!active);
@@ -113,6 +113,7 @@ export default function Navbar({ home }) {
               "transition-all hidden w-10 mr-2 lg:mx-2 lg:flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 hover:border-2 border-white"
             }
             title="user"
+            onClick={handleToggle}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +160,11 @@ export default function Navbar({ home }) {
             (active ? "" : " hidden")
           }
         ></div>
-        <Sidebar handleActive={handleActive} active={active} />
+        <Sidebar
+          handleActive={handleActive}
+          handleToggle={handleToggle}
+          active={active}
+        />
       </div>
       {/* <div className={"fixed mt-24 h-auto w-full md:hidden flex items-center justify-center " + nav}>
       <div className="border-2 my-1 bg-black bg-opacity-50 w-11/12 mx-auto rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 flex items-center justify-center">

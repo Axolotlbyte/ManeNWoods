@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import Layout from "../../components/Layout";
 
 export async function getStaticPaths() {

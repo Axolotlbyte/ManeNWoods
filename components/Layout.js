@@ -8,9 +8,7 @@ import { useEffect, useState } from "react";
 export default function Layout({ children, home, background }) {
   const [toggle, setToggle] = useState(false);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  }
+  const handleToggle = () => setToggle(!toggle);
 
   useEffect(() => {
     console.log(toggle)

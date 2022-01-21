@@ -35,7 +35,7 @@ export default function Card(props) {
         <div className="w-full h-full"></div>
 
         <div id="prod-name" className="w-full cursor-pointer bg-opacity-0 h-auto bg-slate-900 bottom-0 absolute">
-        <p className="text-white text-5xl lg:text-4xl text-left px-4">Product Name</p> 
+        <p className="text-white text-3xl lg:text-4xl text-left px-4">Product Name</p> 
         <p id="price" className="transition-all text-white text-2xl font-light text-right px-6 pb-2">$33.55</p>
         </div>
       </div>

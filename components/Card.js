@@ -1,7 +1,7 @@
 export default function Card(props) {
   return (
     <>
-      <div className="relative cursor-pointer bg-red-800 overflow-hidden rounded-3xl card h-card">
+      <div className="relative card-anim cursor-pointer bg-red-800 overflow-hidden rounded-3xl card h-card">
         {/* <button className="absolute flex items-center justify-center text-white h-14 w-14 bg-slate-900 right-2 top-2 rounded-full ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +58,17 @@ export default function Card(props) {
         button:active svg{
           transform: scale(1);
           transition: transform 200ms;
+        }
+        .card-anim{
+          animation: opacity 1000ms ease-in-out;
+        }
+        @keyframes opacity{
+          from{
+            opacity: 0%
+          }
+          to{
+            opacity: 100%
+          }
         }
       `}</style>
     </>

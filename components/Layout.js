@@ -11,8 +11,8 @@ export default function Layout({ children, home, background }) {
   const handleToggle = () => setToggle(!toggle);
 
   useEffect(() => {
-    console.log(toggle)
-  },[toggle])
+    console.log(toggle);
+  }, [toggle]);
   return (
     <div
       style={
@@ -31,8 +31,8 @@ export default function Layout({ children, home, background }) {
         {children}
         <Account toggle={toggle} handleToggle={handleToggle} />
       </main>
-      <footer className="flex flex-col">
-        <div className="flex items-center justify-center py-2 bg-black text-gray-500 text-lg">
+      <footer className="flex flex-col footer-back backdrop-blur-md">
+        <div className="flex items-center justify-center py-2 backdrop-blur-lg text-gray-500 text-lg">
           <Link href={"/blog"}>
             <a className="mx-2 lg:mx-3">Blog</a>
           </Link>
@@ -49,7 +49,7 @@ export default function Layout({ children, home, background }) {
             <a className="mx-2 lg:mx-3">Terms & Conditions</a>
           </Link>
         </div>
-        <div className="w-full md:hidden h-auto py-2 items-center justify-center text-white flex bg-black">
+        <div className="w-full md:hidden h-auto py-2 items-center justify-center text-white flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -77,7 +77,7 @@ export default function Layout({ children, home, background }) {
         </div>
         <hr className="bg-gradient-to-r from-red-700 to-cyan-600" />
         <div className="flex">
-          <p className="flex text-slate-50 items-center justify-center md:justify-start w-full text-center h-10 bg-black">
+          <p className="flex text-slate-50 items-center justify-center md:justify-start w-full text-center h-10">
             <span className="font-bold px-2">© Mane & Woods,</span> Inc. All
             Rights Reserved.
           </p>
@@ -117,6 +117,20 @@ export default function Layout({ children, home, background }) {
           background-position: center;
           background-size: cover;
           background-image: url("/wave/Vector.svg");
+        }
+        .footer-back {
+          background: linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(192, 0, 33, 1) 19%,
+            rgba(255, 0, 0, 1) 23%,
+            rgba(200, 0, 0, 1) 26%,
+            rgba(171, 0, 0, 1) 28%,
+            rgba(218, 0, 0, 1) 30%,
+            rgba(175, 0, 0, 1) 32%,
+            rgba(0, 0, 0, 1) 45%,
+            rgba(0, 0, 0, 1) 100%
+          );
         }
       `}</style>
     </div>

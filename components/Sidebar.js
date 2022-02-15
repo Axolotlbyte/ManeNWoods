@@ -12,7 +12,7 @@ export default function Sidebar({ active, handleActive, handleToggle }) {
         <button className="p-4" onClick={handleActive}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-9 w-9 text-white"
+            className="h-9 w-9 text-red-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -20,34 +20,8 @@ export default function Sidebar({ active, handleActive, handleToggle }) {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={1}
               d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <button
-          onClick={() => {
-            handleActive();
-            handleToggle();
-          }}
-          className={
-            "transition-all w-10 m-4 lg:mx-2 flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 hover:border-2 border-white"
-          }
-          title="user"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            className="bi bi-person-circle h-8 w-8"
-            viewBox="0 0 16 16"
-          >
-            <path
-              className="text-white"
-              d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"
-            />
-            <path
-              className="text-white"
-              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
             />
           </svg>
         </button>
@@ -56,34 +30,26 @@ export default function Sidebar({ active, handleActive, handleToggle }) {
         <ul className="w-full flex flex-col justify-center pl-4 pt-2 cursor-pointer">
           <li
             onClick={handleActive}
-            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white"
+            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-gray-600 font-bold hover:border-none border-red-600"
           >
             <Link className="w-full" href="/shop">
-              <a className="w-full">Shop</a>
+              <a className="w-full">All</a>
             </Link>
           </li>
           <li
             onClick={handleActive}
-            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white"
+            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-gray-600 font-bold hover:border-none border-red-600"
           >
             <Link className="w-full" href="/blog">
-              <a className="w-full">Blog</a>
+              <a className="w-full">Shampoo</a>
             </Link>
           </li>
           <li
             onClick={handleActive}
-            className="w-full my-2 text-xl p-2 border-l-2 border-collapsetext-white font-semibold hover:border-none border-white"
+            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-gray-600 font-bold hover:border-none border-red-600"
           >
             <Link className="w-full" href="/about">
-              <a className="w-full">About</a>
-            </Link>
-          </li>
-          <li
-            onClick={handleActive}
-            className="w-full my-2 text-xl p-2 border-l-2 border-collapse text-white font-semibold hover:border-none border-white"
-          >
-            <Link className="w-full" href="/contact">
-              <a className="w-full">Contact</a>
+              <a className="w-full">Oil</a>
             </Link>
           </li>
         </ul>

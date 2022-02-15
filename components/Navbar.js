@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import Link from "next/link";
-import { useState} from "react";
+import { useState } from "react";
 import Sidebar from "./Sidebar";
 
 export default function Navbar({ home, handleToggle }) {
@@ -35,11 +35,11 @@ export default function Navbar({ home, handleToggle }) {
       <nav
         id="navbar"
         className={
-          "fixed flex z-40 justify-between w-full items-center h-22 transition-colors " +
+          "fixed flex backdrop-blur-lg z-40 justify-between w-full items-center h-22 transition-colors " +
           nav
         }
       >
-        <div className="p-3 cursor-pointer">
+        <div className="p-3 cursor-pointer w-fit flex items-center justify-center ">
           <Link href="/">
             <a>
               <Image
@@ -50,11 +50,27 @@ export default function Navbar({ home, handleToggle }) {
               />
             </a>
           </Link>
+          <Link href="/shop">
+            <a className="hidden md:flex ml-3 font-semibold hover:underline underline-offset-2 text-lg text-gray-600">
+              All
+            </a>
+          </Link>
+          <Link href="/shop">
+            <a className="hidden md:flex ml-3 font-semibold hover:underline underline-offset-2 text-lg text-gray-600">
+              Shampoo
+            </a>
+          </Link>
+          <Link href="/shop">
+            <a className="hidden md:flex ml-3 font-semibold hover:underline underline-offset-2 text-lg text-gray-600">
+              Oil
+            </a>
+          </Link>
         </div>
-        <div className="border-2 hidden rounded-l-full p-1 text-white rounded-r-full pl-4 pr-3 md:flex items-center justify-center">
+        <div className="border w-2/5 hidden border-gray-600 rounded-l-full p-1 text-gray-600 rounded-r-full pl-4 pr-3 md:flex items-center justify-center">
           <input
             type={"search"}
-            className="w-full outline-0 text-lg lg:text-xl bg-transparent"
+            className="w-full outline-0 text-base lg:text-lg bg-transparent"
+            placeholder="Search Products..."
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -71,46 +87,27 @@ export default function Navbar({ home, handleToggle }) {
             />
           </svg>
         </div>
-        <div className="mr-4 flex items-center">
+        <div className="mr-2 flex items-center">
+          <Link href={"/cart"} passHref>
           <button
             className={
-              "transition-all w-10 lg:mx-1 flex items-center justify-center p-1.5 hover:text-black rounded-full hover:bg-slate-300 text-white h-10"
-            }
-            title="wishlist"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.7}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-          </button>
-          <button
-            className={
-              "transition-all w-10 mx-2 flex items-center justify-center p-1.5 hover:text-black rounded-full hover:bg-slate-300 text-white h-10"
+              "transition-all w-10  flex items-center justify-center p-1 hover:text-black rounded-full hover:bg-slate-300 text-white h-10"
             }
             title="shopping cart"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="bi h-10 w-10 bi-handbag"
+              className="bi h-6 w-6 bi-handbag"
               viewBox="0 0 16 16"
             >
               <path d="M8 1a2 2 0 0 1 2 2v2H6V3a2 2 0 0 1 2-2zm3 4V3a3 3 0 1 0-6 0v2H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11zm-1 1v1.5a.5.5 0 0 0 1 0V6h1.639a.5.5 0 0 1 .494.426l1.028 6.851A1.5 1.5 0 0 1 12.678 15H3.322a1.5 1.5 0 0 1-1.483-1.723l1.028-6.851A.5.5 0 0 1 3.36 6H5v1.5a.5.5 0 1 0 1 0V6h4z" />
             </svg>
           </button>
+          </Link>
           <button
             className={
-              "transition-all hidden w-10 mr-2 lg:mx-2 lg:flex items-center justify-center p-1.5 rounded-full bg-gradient-to-tl from-cyan-500 via-red-500 to-sky-600 h-10 hover:border-2 border-white"
+              "transition-all w-9 mr-2 lg:mx-2 flex items-center justify-center p-1 rounded-full bg-gradient-to-tl from-red-500 via-orange-500 to-pink-600 h-9 ml-1 hover:border-2 border-white"
             }
             title="user"
             onClick={handleToggle}
@@ -118,7 +115,7 @@ export default function Navbar({ home, handleToggle }) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              className="bi bi-person-circle h-8 w-8"
+              className="bi bi-person-circle h-7 w-7"
               viewBox="0 0 16 16"
             >
               <path
@@ -137,15 +134,17 @@ export default function Navbar({ home, handleToggle }) {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 text-white"
+              className="h-8 w-10 text-red-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              preserveAspectRatio="none"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
+                strokeWidth={1.2}
+                preserveAspectRatio="none"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
